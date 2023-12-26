@@ -9,7 +9,7 @@ on:
       - README.md
       - LICENSE
 
-  # Allows you to run this workflow manually from the Actions tab
+  # Permite ejecutar este flujo de trabajo manualmente desde la pestaña de Actions
   workflow_dispatch:
 
 permissions:
@@ -17,7 +17,7 @@ permissions:
   pages: write
   id-token: write
 
-# Allow one concurrent deployment
+# Permite una implementación concurrente
 concurrency:
   group: "pages"
   cancel-in-progress: true
@@ -31,9 +31,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          # submodules: true
-          # If using the 'assets' git submodule from Chirpy Starter, uncomment above
-          # (See: https://github.com/cotes2020/chirpy-starter/tree/main/assets)
 
       - name: Setup Pages
         id: pages
@@ -45,6 +42,12 @@ jobs:
           ruby-version: 3
           bundler-cache: true
 
+      - name: Clean Bundler cache
+        run: bundle clean --force
+
+      - name: Install dependencies
+        run: bundle install
+
       - name: Build site
         run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
         env:
@@ -53,12 +56,13 @@ jobs:
       - name: Test site
         run: |
           bundle exec htmlproofer _site \
-            \-\-disable-external=true \
-            \-\-ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
+            --disable-external=true \
+            --ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
 
       - name: Upload site artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-artifact@v2
         with:
+          name: site
           path: "_site${{ steps.pages.outputs.base_path }}"
 
   deploy:
