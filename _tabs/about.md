@@ -6,7 +6,7 @@ order: 4
 
 # Luis Francisco Matlalcuatzi Gonzalez
 
-**Dirección:** Iturbide Poniente #23, Col. Centro, Santa Ana Chiautempan, Tlaxcala
+**Dirección:** Iturbide Poniente, Santa Ana Chiautempan, Tlaxcala, Mexico.
 
 **Correo Electrónico:** Luis.matlalcuatzi@gmail.com
 
