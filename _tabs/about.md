@@ -2,11 +2,12 @@
 # the default layout is 'page'
 icon: fas fa-info-circle
 order: 4
+mermaid: true
 ---
 
 # Luis Francisco Matlalcuatzi Gonzalez
 
-**Dirección:** Iturbide Poniente, Santa Ana Chiautempan, Tlaxcala, Mexico.
+**Dirección:** Iturbide Poniente, Santa Ana Chiautempan, Tlaxcala, Mexico 
 
 **Correo Electrónico:** Luis.matlalcuatzi@gmail.com
 
