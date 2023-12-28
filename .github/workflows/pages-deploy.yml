@@ -30,7 +30,7 @@ jobs:
       - name: Update Dependencies and Ruby Version
         run: |
           # Actualiza las gemas
-          bundle update
+          bundle update || { echo "Failed to update gems"; exit 1; }
 
           # Verifica la versión de Ruby y las dependencias de WebSocket
           ruby -v
