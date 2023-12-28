@@ -114,34 +114,37 @@ paginate: 10
 # La URL base de tu sitio
 baseurl:
 
-# ------------ The following options are not recommended to be modified ------------------
+# ------------ Las siguientes opciones no se recomienda modificar ------------------
 
+# Configuración de Kramdown, el procesador de Markdown utilizado por Jekyll
 kramdown:
-  syntax_highlighter: rouge
-  syntax_highlighter_opts: # Rouge Options › https://github.com/jneen/rouge#full-options
-    css_class: highlight
+  syntax_highlighter: rouge # Utiliza Rouge para el resaltado de sintaxis
+  syntax_highlighter_opts: # Opciones de Rouge › https://github.com/jneen/rouge#full-options
+    css_class: highlight # Clase CSS para el resaltado
     # default_lang: console
     span:
-      line_numbers: false
+      line_numbers: false # Números de línea en bloques de código en línea
     block:
-      line_numbers: true
-      start_line: 1
+      line_numbers: true # Números de línea en bloques de código
+      start_line: 1 # Número de línea inicial
 
+# Configuración de colecciones personalizadas
 collections:
   tabs:
-    output: true
-    sort_by: order
+    output: true # Genera archivos para cada elemento en la colección 'tabs'
+    sort_by: order # Ordena por el campo 'order'
 
+# Valores predeterminados para diferentes tipos de contenidos
 defaults:
   - scope:
-      path: "" # An empty string here means all files in the project
+      path: "" # Una cadena vacía aquí significa todos los archivos en el proyecto
       type: posts
     values:
       layout: post
-      comments: true # Enable comments in posts.
-      toc: true # Display TOC column in posts.
-      # DO NOT modify the following parameter unless you are confident enough
-      # to update the code of all other post links in this project.
+      comments: true # Habilita comentarios en los posts.
+      toc: true # Muestra la columna TOC en los posts.
+      # NO modificar el siguiente parámetro a menos que estés seguro de actualizar
+      # el código de todos los demás enlaces de posts en este proyecto.
       permalink: /posts/:title/
   - scope:
       path: _drafts
@@ -149,7 +152,7 @@ defaults:
       comments: false
   - scope:
       path: ""
-      type: tabs # see `site.collections`
+      type: tabs # ver `site.collections`
     values:
       layout: page
       permalink: /:title/
@@ -162,9 +165,11 @@ defaults:
     values:
       swcache: true
 
+# Configuración de Sass, el procesador de CSS
 sass:
-  style: compressed
+  style: compressed # Estilo de compresión de CSS
 
+# Configuración para comprimir HTML
 compress_html:
   clippings: all
   comments: all
@@ -172,8 +177,9 @@ compress_html:
   profile: false
   blanklines: false
   ignore:
-    envs: [development]
+    envs: [development] # Ignora la compresión en el entorno de desarrollo
 
+# Excluir archivos y carpetas del sitio generado
 exclude:
   - "*.gem"
   - "*.gemspec"
@@ -184,11 +190,12 @@ exclude:
   - rollup.config.js
   - package*.json
 
+# Configuración para jekyll-archives, crea archivos para categorías y etiquetas
 jekyll-archives:
-  enabled: [categories, tags]
+  enabled: [categories, tags] # Habilita archivos para categorías y etiquetas
   layouts:
     category: category
     tag: tag
   permalinks:
-    tag: /tags/:name/
-    category: /categories/:name/
+    tag: /tags/:name/ # Estructura de enlace permanente para etiquetas
+    category: /categories/:name/ # Estructura de enlace permanente para categorías
