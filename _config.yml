@@ -1,118 +1,118 @@
-# The Site Configuration
+# Configuración del Sitio
 
-# Import the theme
+# Importar el tema
 theme: jekyll-theme-chirpy
 
-# The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
-# If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
-# otherwise, the layout language will use the default value of 'en'.
+# El idioma de la página web › http://www.lingoes.net/en/translator/langcode.htm
+# Si tiene el mismo nombre que uno de los archivos en la carpeta `_data/locales`, el idioma del layout también cambiará,
+# de lo contrario, el idioma del layout usará el valor por defecto 'en'.
 lang: es-ES
 
-# Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
+# Cambia a tu zona horaria › https://kevinnovak.github.io/Time-Zone-Picker
 timezone: America/Mexico_City
 
-# jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
+# Configuraciones de jekyll-seo-tag › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Luis Francisco # the main title
+title: Luis Francisco # el título principal
 
-tagline: Tecnico en electricidad y futuro programador. # it will display as the sub-title
+tagline: Tecnico en electricidad y futuro programador. # se mostrará como el subtítulo
 
-description: >- # used by seo meta and the atom feed
-  A minimal, responsive and feature-rich Jekyll theme for technical writing.
+description: >- # utilizado por el meta seo y el feed atom
+  Técnico en electricidad con una sólida formación en ciencias de la computación
 
-# Fill in the protocol & hostname for your site.
-# e.g. 'https://username.github.io', note that it does not end with a '/'.
+# Completa con el protocolo y el nombre de host de tu sitio.
+# ej. 'https://username.github.io', nota que no termina con una '/'.
 url: "https://t4dokiary.github.io"
 
 github:
-  username: t4dokiary # change to your github username
+  username: t4dokiary # cambia a tu nombre de usuario de github
 
 twitter:
-  username: TadokiaryKazuto # change to your twitter username
+  username: TadokiaryKazuto # cambia a tu nombre de usuario de twitter
 
 social:
-  # Change to your full name.
-  # It will be displayed as the default author of the posts and the copyright owner in the Footer
+  # Cambia a tu nombre completo.
+  # Se mostrará como el autor por defecto de los posts y el propietario de los derechos de autor en el Footer
   name: Luis Francisco Matlalcuatzi Gonzalez
-  email: luis.matlalcuatzi@gmail.com # change to your email address
+  email: luis.matlalcuatzi@gmail.com # cambia a tu dirección de correo electrónico
   links:
-    # The first element serves as the copyright owner's link
-    - https://twitter.com/TadokiaryKazuto # change to your twitter homepage
-    - https://github.com/t4dokiary # change to your github homepage
-    # Uncomment below to add more social links
+    # El primer elemento sirve como el enlace del propietario de los derechos de autor
+    - https://twitter.com/TadokiaryKazuto # cambia a tu página de inicio de twitter
+    - https://github.com/t4dokiary # cambia a tu página de inicio de github
+    # Descomenta abajo para agregar más enlaces sociales
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
 
-google_site_verification: # fill in to your verification string
+google_site_verification: # completa con tu cadena de verificación
 
 # ↑ --------------------------
-# The end of `jekyll-seo-tag` settings
+# Fin de las configuraciones de `jekyll-seo-tag`
 
 google_analytics:
-  id: # fill in your Google Analytics ID
+  id: # completa con tu ID de Google Analytics
 
-# Prefer color scheme setting.
+# Preferencia de esquema de color.
 #
-# Note: Keep empty will follow the system prefer color by default,
-# and there will be a toggle to switch the theme between dark and light
-# on the bottom left of the sidebar.
+# Nota: Mantener vacío seguirá la preferencia de color del sistema por defecto,
+# y habrá un interruptor para cambiar el tema entre oscuro y claro
+# en la parte inferior izquierda de la barra lateral.
 #
-# Available options:
+# Opciones disponibles:
 #
-#     light  - Use the light color scheme
-#     dark   - Use the dark color scheme
+#     light  - Usa el esquema de color claro
+#     dark   - Usa el esquema de color oscuro
 #
 theme_mode: # [light|dark]
 
-# The CDN endpoint for images.
-# Notice that once it is assigned, the CDN url
-# will be added to all image (site avatar & posts' images) paths starting with '/'
+# El punto final CDN para imágenes.
+# Ten en cuenta que una vez asignado, la url CDN
+# se agregará a todas las rutas de imágenes (avatar del sitio e imágenes de los posts) que comiencen con '/'
 #
-# e.g. 'https://cdn.com'
+# ej. 'https://cdn.com'
 img_cdn:
 
-# the avatar on sidebar, support local or CORS resources
+# el avatar en la barra lateral, soporta recursos locales o CORS
 avatar: "assets/avatar/avatar.jpg"
 
-# boolean type, the global switch for TOC in posts.
+# tipo booleano, el interruptor global para TOC en los posts.
 toc: true
 
 comments:
-  active: # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
-  # The active options are as follows:
+  active: # El interruptor global para comentarios en los posts, ej., 'disqus'.  Mantener vacío significa desactivar
+  # Las opciones activas son las siguientes:
   disqus:
-    shortname: # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
-  # utterances settings › https://utteranc.es/
+    shortname: # completa con el shortname de Disqus. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
+  # Configuraciones de utterances › https://utteranc.es/
   utterances:
     repo: # <gh-username>/<repo>
     issue_term: # < url | pathname | title | ...>
-  # Giscus options › https://giscus.app
+  # Opciones de Giscus › https://giscus.app
   giscus:
     repo: # <gh-username>/<repo>
     repo_id:
     category:
     category_id:
-    mapping: # optional, default to 'pathname'
-    input_position: # optional, default to 'bottom'
-    lang: # optional, default to the value of `site.lang`
-    reactions_enabled: # optional, default to the value of `1`
+    mapping: # opcional, por defecto a 'pathname'
+    input_position: # opcional, por defecto a 'bottom'
+    lang: # opcional, por defecto al valor de `site.lang`
+    reactions_enabled: # opcional, por defecto al valor de `1`
 
-# Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
+# Recursos estáticos autoalojados, opcional › https://github.com/cotes2020/chirpy-static-assets
 assets:
   self_host:
-    enabled: # boolean, keep empty means false
-    # specify the Jekyll environment, empty means both
-    # only works if `assets.self_host.enabled` is 'true'
+    enabled: # tipo booleano, mantener vacío significa falso
+    # especifica el entorno de Jekyll, vacío significa ambos
+    # solo funciona si `assets.self_host.enabled` es 'true'
     env: # [development|production]
 
 pwa:
-  enabled: true # the option for PWA feature
+  enabled: true # la opción para la característica PWA
 
 paginate: 10
 
-# The base URL of your site
-baseurl: ""
+# La URL base de tu sitio
+baseurl:
 
 # ------------ The following options are not recommended to be modified ------------------
 

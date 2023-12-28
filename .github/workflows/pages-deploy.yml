@@ -1,73 +1,77 @@
-name: "Build and Deploy"
+# Nombre del flujo de trabajo, se muestra en la pestaña de Actions de GitHub
+name: "Construir y Desplegar"
+
+# Define los eventos que disparan el flujo de trabajo
 on:
-  push:
-    branches:
+  push: # Ejecuta el flujo de trabajo en eventos push
+    branches: # Especifica las ramas para las cuales se ejecutará
       - main
       - master
-    paths-ignore:
+    paths-ignore: # Ignora los cambios en estos archivos o carpetas
       - .gitignore
       - README.md
       - LICENSE
 
-  # Allows you to run this workflow manually from the Actions tab
+  # Permite ejecutar este flujo de trabajo manualmente desde la pestaña de Acciones
   workflow_dispatch:
 
+# Define los permisos necesarios para el flujo de trabajo
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: read # Permisos para leer el contenido del repositorio
+  pages: write # Permisos para escribir en GitHub Pages
+  id-token: write # Permisos para escribir tokens de identificación
 
-# Allow one concurrent deployment
+# Configuración de concurrencia para evitar despliegues simultáneos
 concurrency:
-  group: "pages"
-  cancel-in-progress: true
+  group: "pages" # Define un grupo de concurrencia
+  cancel-in-progress: true # Cancela ejecuciones en progreso si hay nuevas
 
+# Define los trabajos del flujo de trabajo
 jobs:
+  # Trabajo para construir el sitio web
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest # Define el sistema operativo del runner
 
-    steps:
-      - name: Checkout
+    steps: # Pasos para construir el sitio
+      - name: Checkout # Obtiene el código del repositorio
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
-          # submodules: true
-          # If using the 'assets' git submodule from Chirpy Starter, uncomment above
-          # (See: https://github.com/cotes2020/chirpy-starter/tree/main/assets)
+          fetch-depth: 0 # Obtiene todo el historial del repositorio
 
-      - name: Setup Pages
+      - name: Configurar Páginas # Configura GitHub Pages
         id: pages
         uses: actions/configure-pages@v3
 
-      - name: Setup Ruby
+      - name: Configurar Ruby # Configura el entorno de Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.2.2
-          bundler-cache: true
+          ruby-version: 3.2.2 # Versión de Ruby
+          bundler-cache: true # Habilita la caché de Bundler
 
-      - name: Build site
+      - name: Construir sitio # Construye el sitio con Jekyll
         run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
         env:
-          JEKYLL_ENV: "production"
+          JEKYLL_ENV: "production" # Define el entorno como producción
 
-      - name: Test site
+      - name: Probar sitio # Ejecuta pruebas en el sitio construido
         run: |
           bundle exec htmlproofer _site \
-            \-\-disable-external=true \
-            \-\-ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
+            --disable-external=true \
+            --ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
 
-      - name: Upload site artifact
+      - name: Subir artefacto del sitio # Sube el sitio construido como un artefacto
         uses: actions/upload-pages-artifact@v1
         with:
           path: "_site${{ steps.pages.outputs.base_path }}"
 
+  # Trabajo para desplegar el sitio en GitHub Pages
   deploy:
     environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
+      name: github-pages # Define el entorno de despliegue
+      url: ${{ steps.deployment.outputs.page_url }} # URL del sitio desplegado
+    runs-on: ubuntu-latest # Sistema operativo del runner
+    needs: build # Dependencia del trabajo 'build'
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Desplegar en GitHub Pages # Paso para desplegar el sitio
         id: deployment
         uses: actions/deploy-pages@v2
