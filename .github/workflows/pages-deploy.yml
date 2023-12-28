@@ -27,13 +27,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Update Dependencies and Ruby Version
+        run: |
+          # Actualiza las gemas
+          bundle update
+
+          # Verifica la versión de Ruby y las dependencias de WebSocket
+          ruby -v
+          gem list
+          gem search websocket # Verifica las gemas de WebSocket si es necesario
+
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          # submodules: true
-          # If using the 'assets' git submodule from Chirpy Starter, uncomment above
-          # (See: https://github.com/cotes2020/chirpy-starter/tree/main/assets)
 
       - name: Setup Pages
         id: pages
