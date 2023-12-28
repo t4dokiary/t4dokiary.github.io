@@ -27,6 +27,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3
+          bundler-cache: true
+
       - name: Update Dependencies and Ruby Version
         run: |
           # Actualiza las gemas
@@ -37,20 +48,9 @@ jobs:
           gem list
           gem search websocket # Verifica las gemas de WebSocket si es necesario
 
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
-
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 3
-          bundler-cache: true
 
       - name: Build site
         run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
