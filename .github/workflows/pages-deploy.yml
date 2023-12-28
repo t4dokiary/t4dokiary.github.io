@@ -31,26 +31,19 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          # submodules: true
+          # If using the 'assets' git submodule from Chirpy Starter, uncomment above
+          # (See: https://github.com/cotes2020/chirpy-starter/tree/main/assets)
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v3
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3
           bundler-cache: true
-
-      - name: Update Dependencies and Ruby Version
-        run: |
-          # Actualiza las gemas
-          bundle update || { echo "Failed to update gems"; exit 1; }
-
-          # Verifica la versión de Ruby y las dependencias de WebSocket
-          ruby -v
-          gem list
-          gem search websocket # Verifica las gemas de WebSocket si es necesario
-
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v3
 
       - name: Build site
         run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
