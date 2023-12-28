@@ -1,3 +1,7 @@
-[submodule "assets/lib"]
-	path = assets/lib
-	url = https://github.com/cotes2020/chirpy-static-assets.git
+#[submodule "assets/lib"]
+#	path = assets/lib
+#	url = https://github.com/cotes2020/chirpy-static-assets.git
+
+# submodule "assets/lib" is the remote repository of the static assets.
+# If you want to use your own assets, you can delete the above lines and upload your assets to the "assets/lib" folder.
+```

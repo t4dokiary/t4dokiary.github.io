@@ -101,7 +101,7 @@ comments:
 # Recursos estáticos autoalojados, opcional › https://github.com/cotes2020/chirpy-static-assets
 assets:
   self_host:
-    enabled: # tipo booleano, mantener vacío significa falso
+    enabled: true # tipo booleano, mantener vacío significa falso
     # especifica el entorno de Jekyll, vacío significa ambos
     # solo funciona si `assets.self_host.enabled` es 'true'
     env: # [development|production]
