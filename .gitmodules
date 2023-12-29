@@ -1,6 +1,6 @@
 [submodule "assets/lib"]
 	path = assets/lib
-	url = https://github.com/cotes2020/chirpy-static-assets.git
+	url = https://github.com/t4dokiary/static-assets.git
 
 # El submódulo "assets/lib" es el repositorio remoto de los activos estáticos.
 # Si deseas usar tus propios activos, puedes eliminar las líneas anteriores y cargar tus activos en la carpeta "assets/lib".
