@@ -130,8 +130,8 @@ kramdown:
     tab_width: 2 # Establece el ancho de tabulación en bloques de código
     wrap: true # Activa el ajuste de línea en bloques de código largos
     line_number_anchors: # Prefijo para los enlaces de números de línea
-    inline_theme: "monokai" # Tema de resaltado de sintaxis para bloques de código en línea
-    block_theme: "monokai" # Tema de resaltado de sintaxis para bloques de código
+    inline_theme: # Tema de resaltado de sintaxis para bloques de código en línea
+    block_theme: # Tema de resaltado de sintaxis para bloques de código
 
 # Configuración de colecciones personalizadas
 collections:
