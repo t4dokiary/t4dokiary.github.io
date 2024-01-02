@@ -44,22 +44,13 @@ social:
     - https://github.com/t4dokiary # cambia a tu página de inicio de github
     - https://www.facebook.com/whiichito
 
-# Configuración de verificación de sitio de Google (desactivada por defecto)
-google_site_verification:
-  # Activa o desactiva la verificación de sitio de Google
-  enabled: false
-  # Completa con tu cadena de verificación de Google
-  verification_code: "" # Inserta aquí tu cadena de verificación
+google_site_verification: # completa con tu cadena de verificación
 
 # ↑ --------------------------
 # Fin de las configuraciones de `jekyll-seo-tag`
 
-# Configuración de Google Analytics (desactivada por defecto)
 google_analytics:
-  # Activa o desactiva Google Analytics
-  enabled: true
-  # Completa con tu ID de Google Analytics
-  id: "G-9FFYFGXYJ7" # Inserta aquí tu ID de Google Analytics
+  id: G-9FFYFGXYJ7 # completa con tu ID de Google Analytics
 
 # Preferencia de esquema de color.
 #
@@ -154,7 +145,7 @@ defaults:
       toc: true # Muestra la columna TOC en los posts.
       # NO modificar el siguiente parámetro a menos que estés seguro de actualizar
       # el código de todos los demás enlaces de posts en este proyecto.
-      permalink: /Articulos/:title/
+      permalink: /posts/:title/
   - scope:
       path: _drafts
     values:
@@ -206,5 +197,5 @@ jekyll-archives:
     category: category
     tag: tag
   permalinks:
-    tag: /etiquetas/:name/ # Estructura de enlace permanente para etiquetas
-    category: /categorias/:name/ # Estructura de enlace permanente para categorías
+    tag: /tags/:name/ # Estructura de enlace permanente para etiquetas
+    category: /categories/:name/ # Estructura de enlace permanente para categorías
