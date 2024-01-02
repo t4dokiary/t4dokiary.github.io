@@ -38,19 +38,28 @@ social:
   email: luis.matlalcuatzi@gmail.com # cambia a tu dirección de correo electrónico
   links:
     # El primer elemento sirve como el enlace del propietario de los derechos de autor
+    # Descomenta abajo para agregar más enlaces sociales
+    - https://www.linkedin.com/in/luis-francisco-matlalcuatzi-gonzalez/
     - https://twitter.com/TadokiaryKazuto # cambia a tu página de inicio de twitter
     - https://github.com/t4dokiary # cambia a tu página de inicio de github
-    # Descomenta abajo para agregar más enlaces sociales
-    # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    - https://www.facebook.com/whiichito
 
-google_site_verification: # completa con tu cadena de verificación
+# Configuración de verificación de sitio de Google (desactivada por defecto)
+google_site_verification:
+  # Activa o desactiva la verificación de sitio de Google
+  enabled: false
+  # Completa con tu cadena de verificación de Google
+  verification_code: "" # Inserta aquí tu cadena de verificación
 
 # ↑ --------------------------
 # Fin de las configuraciones de `jekyll-seo-tag`
 
+# Configuración de Google Analytics (desactivada por defecto)
 google_analytics:
-  id: G-9FFYFGXYJ7 # completa con tu ID de Google Analytics
+  # Activa o desactiva Google Analytics
+  enabled: true
+  # Completa con tu ID de Google Analytics
+  id: "G-9FFYFGXYJ7" # Inserta aquí tu ID de Google Analytics
 
 # Preferencia de esquema de color.
 #
@@ -145,7 +154,7 @@ defaults:
       toc: true # Muestra la columna TOC en los posts.
       # NO modificar el siguiente parámetro a menos que estés seguro de actualizar
       # el código de todos los demás enlaces de posts en este proyecto.
-      permalink: /posts/:title/
+      permalink: /Articulos/:title/
   - scope:
       path: _drafts
     values:
@@ -197,5 +206,5 @@ jekyll-archives:
     category: category
     tag: tag
   permalinks:
-    tag: /tags/:name/ # Estructura de enlace permanente para etiquetas
-    category: /categories/:name/ # Estructura de enlace permanente para categorías
+    tag: /etiquetas/:name/ # Estructura de enlace permanente para etiquetas
+    category: /categorias/:name/ # Estructura de enlace permanente para categorías
