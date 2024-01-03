@@ -106,13 +106,15 @@ assets:
     # solo funciona si `assets.self_host.enabled` es 'true'
     env: # [development|production]
 
+# Configuración de Progressive Web App (PWA)
 pwa:
-  enabled: true # la opción para la característica PWA
+  enabled: true # Habilita o deshabilita la característica PWA. Establecer en 'false' para desactivar.
 
-paginate: 10
+# Configuración de paginación
+paginate: 10 # Número de entradas por página. Ajustar según la necesidad.
 
-# La URL base de tu sitio
-baseurl:
+# Configuración de la URL base
+baseurl: "" # La URL base de tu sitio. Dejar vacío si el sitio se despliega en la raíz del dominio.
 
 # ------------ Las siguientes opciones no se recomienda modificar ------------------
 
@@ -172,17 +174,22 @@ defaults:
 
 # Configuración de Sass, el procesador de CSS
 sass:
-  style: compressed # Estilo de compresión de CSS
+  style: compressed # Estilo de compresión de CSS: 'nested', 'expanded', 'compact', 'compressed'.
+  sass_dir: _sass # Directorio donde Sass buscará los archivos fuente.
+  load_paths: [] # Una lista de rutas adicionales para buscar @import.
+  line_comments: false # Incluye comentarios de línea en el archivo CSS resultante, mostrando la ubicación del código fuente original.
+  precision: 5 # Define la precisión decimal para los valores CSS.
+  sourcemap: none # Genera o no un mapa de origen: 'always', 'never', 'development'.
 
 # Configuración para comprimir HTML
 compress_html:
-  clippings: all
-  comments: all
-  endings: all
-  profile: false
-  blanklines: false
-  ignore:
-    envs: [development] # Ignora la compresión en el entorno de desarrollo
+  clippings: all # Elimina bloques de código innecesarios o duplicados.
+  comments: all # Elimina todos los comentarios HTML, incluidos los condicionales de IE.
+  endings: all # Elimina las barras finales de elementos auto-cerrables como <br/>.
+  profile: false # Desactiva la generación de comentarios sobre el rendimiento de la compresión.
+  blanklines: false # Elimina líneas en blanco adicionales para reducir el tamaño del archivo.
+  ignore: # Permite especificar condiciones bajo las cuales no se aplica la compresión.
+    envs: [development] # Ignora la compresión en el entorno de desarrollo para facilitar la depuración.
 
 # Excluir archivos y carpetas del sitio generado
 exclude:
@@ -197,10 +204,21 @@ exclude:
 
 # Configuración para jekyll-archives, crea archivos para categorías y etiquetas
 jekyll-archives:
-  enabled: [categories, tags] # Habilita archivos para categorías y etiquetas
+  enabled: [categories, tags] # Habilita archivos para categorías y etiquetas.
   layouts:
-    category: category
-    tag: tag
+    category: category # Especifica el layout para las páginas de categorías.
+    tag: tag # Especifica el layout para las páginas de etiquetas.
   permalinks:
-    tag: /tags/:name/ # Estructura de enlace permanente para etiquetas
-    category: /categories/:name/ # Estructura de enlace permanente para categorías
+    tag: /tags/:name/ # Estructura de enlace permanente para etiquetas.
+    category: /categories/:name/ # Estructura de enlace permanente para categorías.
+  metadata:
+    type: "archive" # Tipo de metadata adicional para páginas de archivo.
+  defaults:
+    type: "archive-pages" # Tipo por defecto para páginas de archivo.
+  title:
+    enabled: true # Habilita títulos personalizados para páginas de archivo.
+    prefix: "Archivos de " # Prefijo para el título de la página de archivo.
+    suffix: "" # Sufijo para el título de la página de archivo.
+  sort_reverse: false # Ordena las entradas en orden cronológico inverso.
+  limit: 0 # Límite de entradas por página de archivo, 0 para ilimitado.
+
