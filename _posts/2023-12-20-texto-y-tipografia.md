@@ -162,9 +162,5 @@ _Ancho completo de pantalla y alineación central_
 
 ![Vista de Escritorio](/assets/img/2023-12-21-MPI-en-python-y-c/mpi-logo.png){: width="972" height="589" .w-75 .normal}
 
-### Flotar a la izquierda
-
-![Vista de Escritorio](/assets/img/2023-12-21-MPI-en-python-y-c/mpi-logo.png){: width="972" height="589" .w-50 .left}
-Praesent maximus aliquam sapien. Sed vel neque in dolor pulvinar auctor. Maecenas pharetra, sem sit amet inter
 
 

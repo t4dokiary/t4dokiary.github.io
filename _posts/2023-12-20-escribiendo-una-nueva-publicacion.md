@@ -4,7 +4,6 @@ author: t4dokiary
 date: 2023-12-20 01:35:00 +0800
 categories: [Blog, Tutorial]
 tags: [Escribiendo]
-render_with_liquid: false
 ---
 
 Este tutorial te guiará sobre cómo escribir una publicación en la plantilla _Chirpy_, y vale la pena leerlo incluso si ya has usado Jekyll antes, ya que muchas características requieren que se establezcan variables específicas.
@@ -141,10 +140,3 @@ mermaid: true
 ---
 ```
 
-Luego puedes usarlo como otros lenguajes de marcado: rodea el código del gráfico con ```` ```mermaid ```` y ```` ``` ````.
-
-## Imágenes
-
-### Pie de Foto
-
-Añade cursivas a la línea siguiente de una imagen, luego se convertirá en el pie de foto y aparecerá en la parte inferior de

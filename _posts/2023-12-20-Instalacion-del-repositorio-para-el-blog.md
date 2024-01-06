@@ -21,7 +21,7 @@ Hay dos maneras de crear un nuevo repositorio para este tema:
 
 #### Opción 1. Usando el Iniciador Chirpy
 
-Inicia sesión en GitHub y navega a [**Chirpy Starter**][starter], haz clic en el botón <kbd>Usar esta plantilla</kbd> > <kbd>Crear un nuevo repositorio</kbd>, y nombra el nuevo repositorio `USERNAME.github.io`, donde `USERNAME` representa tu nombre de usuario en GitHub.
+Inicia sesión en GitHub y navega a [**Chirpy Starter**][starter], haz clic en el botón <kbd> Usar esta plantilla </kbd> > <kbd> Crear un nuevo repositorio </kbd>, y nombra el nuevo repositorio `USERNAME.github.io`, donde `USERNAME` representa tu nombre de usuario en GitHub.
 
 #### Opción 2. Fork en GitHub
 
