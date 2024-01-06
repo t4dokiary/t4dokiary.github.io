@@ -1,5 +1,5 @@
 ---
-title: Escribiendo una Nueva Publicación
+title: Escribiendo una Nueva Publicacion
 author: t4dokiary
 date: 2023-12-20 01:35:00 +0800
 categories: [Blog, Tutorial]

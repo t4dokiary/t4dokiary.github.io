@@ -1,5 +1,5 @@
 ---
-title: Texto y Tipografía
+title: Texto y Tipografia
 author: t4dokiary
 date: 2023-12-20 05:35:00 +0800
 categories: [Blog, Demo]
