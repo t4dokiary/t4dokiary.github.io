@@ -1,7 +1,7 @@
 ---
 title: Escribiendo una Nueva Publicación
 author: t4dokiary
-date: 2023-12-20 14:10:00 +0800
+date: 2023-12-20 01:35:00 +0800
 categories: [Blog, Tutorial]
 tags: [Escribiendo]
 render_with_liquid: false

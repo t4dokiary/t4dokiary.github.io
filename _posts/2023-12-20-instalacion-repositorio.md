@@ -1,7 +1,7 @@
 ---
 title: Instalacion del repositorio para el blog
 author: t4dokiary
-date: 2023-12-20 20:55:00 +0800
+date: 2023-12-20 02:35:00 +0800
 categories: [Blog, Instalacion]
 tags: [Instalacion]
 ---

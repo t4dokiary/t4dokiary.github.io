@@ -1,8 +1,8 @@
 ---
 title: Texto y Tipografía
 author: t4dokiary
-date: 2023-12-20 11:33:00 +0800
-categories: [Blog, Demo, pagina]
+date: 2023-12-20 05:35:00 +0800
+categories: [Blog, Demo]
 tags: [Tipografía]
 math: true
 mermaid: true

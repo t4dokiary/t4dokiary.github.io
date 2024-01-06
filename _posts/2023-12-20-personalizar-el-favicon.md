@@ -1,7 +1,7 @@
 ---
 title: Personalizar el Favicon
 author: t4dokiary
-date: 2023-12-20 00:34:00 +0800
+date: 2023-12-20 03:35:00 +0800
 categories: [Blog, Icon]
 tags: [favicon]
 ---
