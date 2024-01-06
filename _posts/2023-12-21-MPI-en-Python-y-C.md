@@ -5,7 +5,6 @@ date: 2023-12-21 23:15:00 +0800
 categories: [Apuntes, Sistemas Operativos 2, Programación Paralela, MPI, Python, C, Clase]
 tags: [c, python, mpi]
 render_with_liquid: false
-pin: true
 image:
   path: /assets/img/2023-12-21-MPI-en-python-y-c/mpi-logo.png
 ---
