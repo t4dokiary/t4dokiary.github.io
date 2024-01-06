@@ -107,4 +107,4 @@ Hay algunas cosas que preparar.
 
 A continuación, configura el servicio _Pages_.
 
-1. Navega a tu repositorio en GitHub. Selecciona la pestaña _Settings_, luego haz clic en _Pages_ en la barra de navegación izquierda. Luego, en la sección **Source** (bajo _Build and deployment_), selecciona [**GitHub Actions**][pages-workflow-src] en el menú des
+1. Navega a tu repositorio en GitHub. Selecciona la pestaña _Settings_, luego haz clic en _Pages_ en la barra de navegación izquierda. Luego, en la sección **Source** (bajo _Build and deployment_), selecciona [**GitHub Actions**][pages-workflow-src] 
