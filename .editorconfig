@@ -1,19 +1,57 @@
+# Configuración de .editorconfig para proyectos de código abierto
 root = true
 
+# Configuraciones predeterminadas para todos los archivos
 [*]
+# Establece la codificación de caracteres como UTF-8 para todos los archivos
 charset = utf-8
+# Usa espacios en lugar de tabulaciones para la indentación
 indent_style = space
-indent_size = 2
+# Configura el tamaño de la indentación a 4 espacios
+indent_size = 4
+# Elimina los espacios en blanco al final de cada línea al guardar
 trim_trailing_whitespace = true
-# Unix-style newlines with a newline ending every file
-end_of_line = lf
+# Asegura que haya una línea nueva al final de cada archivo
 insert_final_newline = true
+# Establece un límite de longitud de 100 caracteres por línea
+max_line_length = 100
 
+
+# JavaScript, CSS, SCSS
 [*.{js,css,scss}]
+indent_size = 2
 quote_type = single
 
+# HTML, XML
+[*.{html,xml}]
+indent_size = 4
+
+# JSON
+[*.json]
+indent_size = 2
+
+# Python
+[*.py]
+indent_style = space
+indent_size = 4
+max_line_length = 120
+
+# Ruby
+[*.rb]
+indent_style = space
+indent_size = 2
+
+# YAML
 [*.{yml,yaml}]
+indent_size = 2
 quote_type = double
 
+# Markdown
 [*.md]
 trim_trailing_whitespace = false
+max_line_length = 80
+
+# Configuraciones específicas para archivos de configuración (como .editorconfig, .gitconfig)
+[.{editorconfig,gitconfig}]
+indent_size = 2
+
